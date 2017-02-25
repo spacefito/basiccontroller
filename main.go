@@ -9,6 +9,10 @@ import (
 
 
 func main() {
-	controllerApp := controller.OfApp{nil, nil, nil}
+	controllerApp := controller.NewOfApp()
 	log.Infoln( controllerApp)
+	controllerApp.SwitchConnected(nil)
+	controllerApp.SwitchDisconnected(nil)
+	controllerApp.PacketRcvd(nil, nil)
+	controllerApp.SendFlowMod(nil, nil)
 }
